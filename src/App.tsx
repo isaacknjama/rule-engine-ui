@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Box, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
+import { Chama, ChamaList, ChamaTemplate } from './components';
+import type { ChamaTemplate as ChamaTemplateType } from './components';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Box p={4}>
+      <Tabs variant="enclosed" colorScheme="teal">
+        <TabList>
+          <Tab>Create Chama</Tab>
+          <Tab>Chama List</Tab>
+          <Tab>Templates</Tab>
+        </TabList>
+        <TabPanels>
+          <TabPanel>
+            <Chama />
+          </TabPanel>
+          <TabPanel>
+            <ChamaList />
+          </TabPanel>
+          <TabPanel>
+            <ChamaTemplate />
+          </TabPanel>
+        </TabPanels>
+      </Tabs>
+    </Box>
+  );
 }
 
-export default App
+export default App;
