@@ -1,54 +1,115 @@
-# React + TypeScript + Vite
+# Rule Engine UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React application for managing chama groups with rule-based operations. Built with React 19, TypeScript, and Chakra UI.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Create and manage chama groups
+- View and edit chama details
+- Rule engine implementation for automated group operations
+- Responsive UI built with Chakra UI
+- TanStack Router for client-side routing
 
-## Expanding the ESLint configuration
+## Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Node.js 18+ or Bun
+- npm, yarn, or bun
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
+## Installation
+
+Clone the repository and install dependencies:
+
+```bash
+# Clone the repository
+git clone https://github.com/isaacknjama/rule-engine-ui.git
+cd rule-engine-ui
+
+# Using npm
+npm install
+
+# Using yarn
+yarn
+
+# Using bun
+bun install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
+Start the development server:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-});
+```bash
+# Using npm
+npm run dev
+
+# Using yarn
+yarn dev
+
+# Using bun
+bun dev
 ```
+
+The application will be available at http://localhost:5173
+
+## Building for Production
+
+Build the application for production:
+
+```bash
+# Using npm
+npm run build
+
+# Using yarn
+yarn build
+
+# Using bun
+bun run build
+```
+
+Preview the production build:
+
+```bash
+# Using npm
+npm run preview
+
+# Using yarn
+yarn preview
+
+# Using bun
+bun run preview
+```
+
+## Project Structure
+
+```
+rule-engine-ui/
+├── src/
+│   ├── components/     # UI components
+│   ├── assets/         # Static assets
+│   ├── App.tsx         # Main application component
+│   └── main.tsx        # Application entry point
+├── public/             # Static files
+├── .prettierrc         # Prettier configuration
+├── eslint.config.js    # ESLint configuration
+├── vite.config.ts      # Vite configuration
+└── tsconfig.json       # TypeScript configuration
+```
+
+## Scripts
+
+- `dev`: Start development server
+- `build`: Build for production
+- `preview`: Preview production build
+- `lint`: Run ESLint
+- `format`: Run Prettier
+
+## Contact
+
+For questions or support, please contact:
+
+- **Isaack Njama** - [GitHub](https://github.com/isaacknjama)
+- **Email**: <munguiisaack@gmail.com>
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
